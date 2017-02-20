@@ -4,6 +4,7 @@ dist/
 npm-debug.log
 .idea/
 venv/
+2venv/
 *.py[cod]
 
 # C extensions
