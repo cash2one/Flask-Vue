@@ -81,7 +81,7 @@ def dropall():
 
 @manager.command
 def clear_A():
-	# heroku db upgrade£¬ÇÒ±£ÁôÔ­À´Êý¾Ý
+	# heroku db upgradeï¿½ï¿½ï¿½Ò±ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     Alembic.clear_A()
     print "Alembic content cleared"
 
@@ -94,7 +94,7 @@ def initrole():
     db.session.add(Role(name="user"))
     pwd = os.getenv('FLASK_ADMIN_PWD') or raw_input("Pls input Flask admin pwd:")
     db.session.add(User(email="admin", password=encrypt_password(pwd), active=True))
-    # Heroku postgres ±ØÐëÏÈcommit£¬ÔÙÌí¼ÓÒÔÏÂroles_users¹ØÏµ
+    # Heroku postgres ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½commitï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½roles_usersï¿½ï¿½Ïµ
     db.session.commit()
     ins=roles_users.insert().values(user_id="1", role_id="1")
     db.session.execute(ins)
